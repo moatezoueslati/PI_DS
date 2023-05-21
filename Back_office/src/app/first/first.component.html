@@ -1,0 +1,61 @@
+<style>
+  .custom-toolbar {
+    background-color: #28334A;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+    .custom-icon1 {
+      color: white;
+    }
+  
+    .toolbar-title {
+      flex-grow: 1;
+      margin: 0 16px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  
+    .options {
+      display: flex;
+      align-items: center;
+    }
+  
+    .options button {
+      color: white;
+      margin-left: 8px;
+      padding: 4px;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .options button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+  
+  <mat-toolbar class="custom-toolbar">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="closeMenu()">
+        <mat-icon class="custom-icon1"></mat-icon>
+      </button>
+      <span class="toolbar-title">Mtaa Dbebiz</span>
+      <div class="options">
+        <button mat-icon-button matTooltip="Description of your application">
+          <mat-icon>help_outline</mat-icon>
+        </button>
+        <button mat-icon-button style="text-align: left" (click)="setting()">
+          <mat-icon>settings</mat-icon>
+        </button>
+        <button mat-button >
+          <mat-icon>logout</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  

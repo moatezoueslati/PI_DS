@@ -1,0 +1,16 @@
+
+    button{
+        margin:  20px;align-items:right;
+    }
+    .mat-icon {
+        vertical-align: middle;
+     }
+
+     .custom-icon1 {
+        background-image: url('https://cdn-icons-png.flaticon.com/512/5919/5919771.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 24px; /* Adjust the width and height to fit your icon size */
+        height: 24px;
+      }
+    

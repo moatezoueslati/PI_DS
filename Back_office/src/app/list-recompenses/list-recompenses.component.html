@@ -1,0 +1,153 @@
+
+<Style>
+/* Style du conteneur principal */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style de la carte */
+.mat-card {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #b2e990; /* Couleur de fond bleue */
+
+  transition: box-shadow 0.3s ease;
+}
+
+.mat-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style de l'en-tête de la carte */
+.mat-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style de l'image d'avatar */
+mat-card-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Style du titre de la carte */
+.mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style du sous-titre de la carte */
+.mat-card-subtitle {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+/* Style de l'image de la carte */
+mat-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style du contenu de la carte */
+.mat-card-content {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* Style du bouton de suppression */
+button.delete-button {
+  background-color: #ff4545;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.delete-button:hover {
+  background-color: #d40000;
+}
+
+/* Style du bouton de modification */
+button.update-button {
+  background-color: #ffab40;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.update-button:hover {
+  background-color: #e68a00;
+}
+
+/* Style des icônes dans les boutons */
+mat-icon.small-icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+</Style>
+<button  type="button" class="btn btn-success mx-1" (click)="openDialog()">ADD NEW Recompense</button>
+
+<div class="card-wrapper" style="display: flex; flex-direction: row;">
+    <ng-container *ngFor="let f of recompenses">
+
+    <mat-card class="example-card" style="width: 300px; height: 400px;" >
+      <mat-card-header>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/1426/1426770.png"
+          mat-card-avatar />
+        <mat-card-title>RecompensesID : {{f.id}}</mat-card-title>
+        <mat-card-subtitle>
+Type : {{f.type}}      </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image style="width: 150px;" [src]="getImageUrl(f.type)" alt="Angular Logo">
+      <mat-card-content>
+        <p>
+            Points:{{f.points}}
+           </p>
+        <p>
+         Description:{{f.description}}
+        </p>
+        <button class="delete-button" (click)="deleteR(f.id)" >
+          <mat-icon class="small-icon">delete</mat-icon>
+        </button>
+        <button  class="update-button" (click)="updateR(f.id)">
+        <mat-icon class="small-icon">update</mat-icon>  </button>
+      </mat-card-content>
+  
+      <mat-card-actions>
+        <!-- <button mat-raised-button color="accent">LIKE</button>
+        <button mat-raised-button color="primary">SHARE</button> -->
+      </mat-card-actions>
+    </mat-card>
+</ng-container>
+
+
+  </div>

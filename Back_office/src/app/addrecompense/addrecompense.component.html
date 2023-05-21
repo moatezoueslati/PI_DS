@@ -1,0 +1,65 @@
+
+<p class="h4 d-flex justify-content-center mt-2" style="font-family:'Trebuchet MS';">
+    ADD Recompense </p> 
+ 
+         <div class=" form-group my-2 mx-4">
+             <form #depForm="ngForm" (ngSubmit)="onFormSubmit(depForm)">
+            
+
+
+
+                <div>   <label> Type</label>
+                    <br>
+              
+                 
+          
+                    <mat-select  type="text" class ="form-control"  ngModel
+                    name = "type" >
+                    <mat-option value="Recharge téléphonique 1DT">Recharge téléphonique 1DT</mat-option>
+                    <mat-option value="Bon d'achat">Bon d'achat</mat-option>
+                    <mat-option value="Recharge téléphonique 2DT">Recharge téléphonique 2DT</mat-option>
+                    <mat-option value="Abonnement salle de Sport">Abonnement salle de Sport</mat-option>
+
+                    <mat-option value="Ticket restaurant">Ticket restaurant</mat-option>
+
+                    <mat-option value="Ticket cinema">Ticket cinema</mat-option>
+                    <mat-option value="Ticket de transport">Ticket de transport</mat-option>
+
+
+            
+
+                      
+                    </mat-select>
+                  </div>
+
+              
+                 <div class="form-group">
+                     <label> Points</label>
+                     <input type="number" class ="form-control" ngModel
+                        name = "points"   min="10" max="500" >
+                 </div>
+
+                 <div class="form-group">
+                    <label> Description</label>
+                    <input type="text" class ="form-control"   ngModel
+                    
+                       name = "description" >
+                </div>
+                 
+                
+             
+                
+                 
+                   
+               
+           
+                   
+ 
+ 
+                 <button class="  btn btn-primary" type="submit">Ajouter</button>
+                 <button class="  btn btn-danger" (click)="annuler()" >Annuler</button>
+ 
+             </form> 
+         </div>
+ 
+ 

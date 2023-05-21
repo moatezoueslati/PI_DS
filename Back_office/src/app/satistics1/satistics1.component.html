@@ -1,0 +1,59 @@
+<div>
+  <div>
+    <h1>Statistics</h1>
+  </div>
+  <div class="chart-container">
+
+
+    <div class="chart">
+      <h2>Quantity of bottles for each RVM</h2>
+      <canvas baseChart
+              [datasets]="lineChartData"
+              [labels]="labels"
+              [options]="lineChartOptions"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType1">
+      </canvas>
+    </div>
+
+
+
+    <div class="chart">
+      <h2>Number of recompenses of each type</h2>
+
+      <canvas baseChart
+              [datasets]="lineChartData2"
+              [labels]="labels2"
+              [options]="lineChartOptions"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType2">
+      </canvas>
+    </div>
+
+    <div class="chart">
+      <h2>Number of bottles for each brand</h2>
+      <canvas baseChart
+              [datasets]="lineChartData1"
+              [labels]="labels1"
+              [options]="lineChartOptions"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType1">
+      </canvas>
+    </div>
+    <div class="chart">
+      <h2>Maximum of bottles for each RVM</h2>
+      <canvas baseChart
+              [datasets]="lineChartData3"
+              [labels]="labels3"
+              [options]="lineChartOptions"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType">
+      </canvas>
+    </div>
+
+
+  </div>
+
+
+
+</div>

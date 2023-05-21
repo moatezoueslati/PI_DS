@@ -1,0 +1,152 @@
+<style>
+  .h4 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 2rem;
+      font-family: 'Trebuchet MS';
+  }
+
+  .form-group {
+      margin: 2rem 0;
+  }
+
+  .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+  }
+
+  label {
+      font-weight: bold;
+  }
+
+
+  
+  .btn {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+  }
+
+  .btn-success {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+  }
+
+  .btn-danger {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+  }
+
+  .d-flex {
+      display: flex;
+  }
+
+  .justify-content-center {
+      justify-content: center;
+  }
+
+  .mt-2 {
+      margin-top: 0.5rem;
+  }
+
+  .my-2 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .mx-4 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  .text-center {
+      text-align: center;
+  }
+  .small-button {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    line-height: 1;
+  }
+  
+n .mat-icon {
+    font-size:10px;
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Style du bouton de suppression */
+button.delete-button {
+  background-color: #6f0808; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 5px 10px; /* Espacement intérieur */
+  cursor: pointer; /* Curseur de souris en forme de main */
+}
+
+/* Style du bouton de modification */
+button.update-button {
+  background-color: #aab83f; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 5px 10px; /* Espacement intérieur */
+  cursor: pointer; /* Curseur de souris en forme de main */
+}
+
+
+</style>
+
+
+<div class="container m-2 border rounded border-dark "style="width:auto">
+    <p class="d-flex justify-content-center h4"style="font-family:'Trebuchet MS';" >RVM LIST
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        
+      
+    
+    
+    </p>
+   
+    <table  class="table table-sm"   >
+        
+        <thead style="background-color:rgb(52, 94, 44);color: white;">
+            <tr>
+              <th scope="col">Localisation</th>
+              <th scope="col">Quantité</th>
+              <th scope="col">Quantité Maximale</th> 
+             
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let f of rvm.rvm   " >
+              
+               
+                <td >{{f.localisation}}</td>
+                <td >{{f.quantite}}</td>
+                <td >{{f.quantiteMax}}</td>
+                <td>
+                  <!-- -->
+                
+                 <!-- --> 
+                 <button class="delete-button" (click)="deleteRVM(f.id)" >
+                  <mat-icon class="small-icon">delete</mat-icon>
+                </button>
+                <button  class="update-button" (click)="updateRVM(f.id)">
+                <mat-icon class="small-icon">update</mat-icon>  </button>
+                </td>
+            </tr>
+          </tbody>
+       
+        </table>
+
+        <button  type="button" class="btn btn-success mx-1" (click)="openDialog()">ADD NEW RVM</button>
+
+</div>

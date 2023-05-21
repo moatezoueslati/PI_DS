@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de connexion</title>
+  <style>
+    /* Styles pour la mise en page et l'apparence générale */
+
+    body {
+      background-color: #4b5320; /* Vert militaire */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 400px;
+      height: 500px;
+
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      background-color: #4caf50;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    /* Styles pour les icônes des réseaux sociaux */
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      color: #fff;
+      border-radius: 50%;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 40px;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background-color: #4caf50;
+    }
+
+    .social-icons .fa {
+      font-size: 20px;
+    }
+
+    /* Styles pour l'image circulaire et l'animation */
+
+    .logo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: rotate 2s linear infinite;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="https://i0.wp.com/ohmymalta.com.mt/wp-content/uploads/2021/05/REVERSE.jpg?fit=4914%2C3932&ssl=1" alt="Logo" class="logo">
+      <h2>Connexion</h2>
+      <form  (submit)="onSubmit($event)">
+        <div class="form-group">
+          <label for="username">Nom d'utilisateur</label>
+          <input type="text" id="username" placeholder="Entrer votre nom d'utilisateur" required>
+        </div>
+        <div class="form-group">
+          <button class="btn-primary"  >Connexion</button>
+          <video #videoElement></video>
+          <canvas #canvasElement style="display: none;"></canvas>
+        </div>
+      </form>
+   
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<style>
+  .app-container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 240px;
+    background-color: #6bead1;
+    padding: 20px;
+  }
+
+  .content {
+    flex-grow: 1;
+    margin: 0; /* Supprimer les marges */
+
+    padding: 20px;
+    margin-left: 20px; /* Ajoute une marge à gauche */
+  }
+
+  .app-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
+
+<app-first ></app-first>  
+
+<div class="app-container">
+  <div class="sidebar">
+    <app-menu></app-menu>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+    <footer class="app-footer">
+      <mat-label>ESPRIT-2023</mat-label>
+    </footer>
+  </div>
+</div>

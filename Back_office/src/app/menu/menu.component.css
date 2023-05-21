@@ -1,0 +1,120 @@
+.profile-card{
+    text-align: center;
+    padding: 0 20px 20px 20px;
+  
+  
+    background-color: #6bead1;
+  }
+    img{
+        width: 150px;
+        height: 150px;
+    }
+
+
+mat-icon{
+    margin-right: 20px;
+    background-color: #6bead1;
+
+}
+.my-nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .menu-spacer {
+    flex: 1 1 auto;
+  }
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+  }
+
+  .custom-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3241/3241079.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px; /* Adjust the width and height to fit your icon size */
+    height: 24px;
+    background-color: #6bead1;
+
+  }
+  
+  .custom-icon1 {
+    background-image: url('https://cdn4.iconfinder.com/data/icons/supermarket-48/512/Drinks-Bottle-Can-Soft_drinks-512.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px; /* Adjust the width and height to fit your icon size */
+    height: 24px;
+    background-color: #6bead1;
+
+  }
+
+  .custom-icon2 {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/4254/4254577.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px; /* Adjust the width and height to fit your icon size */
+    height: 24px;
+    background-color: #6bead1;
+
+  }
+
+
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color:green;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: green;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: green;
+    color: green;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+  .rotate-image {
+    animation: rotate 4s infinite linear;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,89 @@
+
+<p class="h4 d-flex justify-content-center mt-2" style="font-family:'Trebuchet MS';">
+    ADD BOTTLES </p> 
+ 
+         <div class=" form-group my-2 mx-4">
+             <form #depForm="ngForm" (ngSubmit)="onFormSubmit(depForm)">
+               
+
+
+
+
+
+                 <div>   <label> Brand Name</label>
+                    <br>
+              
+                 
+          
+                    <mat-select  type="text" class ="form-control"  ngModel
+                    name = "name" >
+                    <mat-option value="CocaCola">CocaCola</mat-option>
+                    <mat-option value="Fanta">Fanta</mat-option>
+                    <mat-option value="Safia">Safia</mat-option>
+                    <mat-option value="Marwa">Marwa</mat-option>
+                    <mat-option value="Melliti">Melliti</mat-option>
+                    <mat-option value="Boga">Boga</mat-option>
+
+                    <mat-option value="Fourat">Fourat</mat-option>
+
+                    <mat-option value="Sprite">Sprite</mat-option>
+                
+            
+
+                      
+                    </mat-select>
+                  </div>
+
+
+
+
+
+
+
+
+
+                 <div>   <label> Type</label>
+                    <br>
+              
+                 
+          
+                    <mat-select  type="text" class ="form-control"  ngModel
+                    name = "type" >
+                    <mat-option value="PLASTIQUE0.5L">PLASTIQUE_0.5L</mat-option>
+                    <mat-option value="PLASTIQUE1L">PLASTIQUE_1L</mat-option>
+                    <mat-option value="PLASTIQUE1.5L">PLASTIQUE_1.5L</mat-option>
+                    <mat-option value="PLASTIQUE2L">PLASTIQUE_2L</mat-option>
+
+                    <mat-option value="CANETTE">Can</mat-option>
+                
+            
+
+                      
+                    </mat-select>
+                  </div>
+
+
+              
+                 <div class="form-group">
+                     <label> Points</label>
+                     <input type="number" class ="form-control" ngModel
+                        name = "points"   min="10" max="50" >
+                 </div>
+                 
+                
+             
+                
+                 
+                   
+               
+           
+                   
+ 
+ 
+                 <button class="  btn btn-primary" type="submit">Ajouter</button>
+                 <button class="  btn btn-danger" (click)="annuler()" >Annuler</button>
+ 
+             </form> 
+         </div>
+ 
+ 

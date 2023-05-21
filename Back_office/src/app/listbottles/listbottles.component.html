@@ -1,0 +1,81 @@
+<Style>
+    /* Style du bouton de suppression */
+button.delete-button {
+  background-color: #6f0808; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 5px 10px; /* Espacement intérieur */
+  cursor: pointer; /* Curseur de souris en forme de main */
+}
+
+/* Style du bouton de modification */
+button.update-button {
+  background-color: #aab83f; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 5px 10px; /* Espacement intérieur */
+  cursor: pointer; /* Curseur de souris en forme de main */
+}
+img.mat-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+</Style>
+<div class="container m-2 border rounded border-dark "style="width:auto">
+    <p class="d-flex justify-content-center h4"style="font-family:'Trebuchet MS';" >BOTTLES LIST       
+      
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+
+      
+      <button  type="button" class="btn btn-success mx-1" (click)="openDialog()">ADD NEW BOTTLE</button>
+
+     
+        
+      
+    
+    
+    </p>
+   
+    <table  class="table table-sm"   >
+        
+        <thead style="background-color:rgb(52, 94, 44);color: white;">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Points</th> 
+              <th scope="col">Brand</th> 
+
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let f of bottles   " >
+              
+               
+                <td >{{f.name}}</td>
+                <td >{{f.type}}</td>
+                <td >{{f.points}}</td>
+
+
+                <td>      <img mat-card-image style="width: 150px;height:80px;" [src]="getImageUrl(f.name)" alt="Angular Logo">
+                </td>
+                <td>
+                  <!-- -->
+                
+                 <!-- --> 
+                 <button class="delete-button" (click)="deleteBottle(f.id)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+                <button class="update-button"(click)="updateBottle(f.id)">
+                <mat-icon>update</mat-icon>  </button>
+                </td>
+            </tr>
+          </tbody>
+       
+        </table>
+
+
+</div>
